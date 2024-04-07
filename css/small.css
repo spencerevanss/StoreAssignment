@@ -1,0 +1,116 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Apply a natural box layout model to all elements */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li::marker {
+    content:"\2605";
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #b1b1b1;
+    --background-color: #f9f9f9;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+header {
+    position: relative;
+    color: rgb(255, 0, 0);
+    padding: 1rem 2%;
+    background: var(--background-color) url('../images/hero.jpg') center center/cover no-repeat;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.25); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+nav {
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav button {
+    flex-basis: 48%;
+    margin: .5rem 1%;
+    padding: 1rem 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background: var(--background-color);
+    color: var(--primary-color);
+}
+
+#viewer {
+    margin: .5rem 2%;
+    border-radius: 11px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--background-color);
+}
+
+#viewer img {
+    width: 100%;
+    display: block;
+}
+
+#viewer h2 {
+    margin: 0;
+    padding: .5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#viewer ul {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0 0 .5rem 1rem;
+    color: var(--primary-color);
+}
+
+#viewer p {
+    padding: 1rem 2%;
+    font-size: 1.2rem;
+    font-weight: bold; 
+}
+
+
+footer {
+    text-align: center;
+    background: var(--background-color);
+    color: var(--primary-color);
+    padding: 1rem;
+}
